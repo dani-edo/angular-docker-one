@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:1.21.5-alpine
+    container_name: nginx
+    volumes:
+      - ./dist/angular-docker-one:/var/www
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
