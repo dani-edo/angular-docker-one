@@ -1,2 +1,7 @@
 <h1>Docker Angular 1 running on port:{{ port }}</h1>
 <img src="/assets/docker-cover.png" alt="docker cover" />
+<div class="users">
+  <div *ngFor="let user of users" class="user">
+    {{ user.name }}
+  </div>
+</div>
