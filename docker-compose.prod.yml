@@ -1,0 +1,14 @@
+version: '3'
+networks:
+  my_network:
+    driver: bridge
+services:
+  app2:
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
+    container_name: app2
+    ports:
+      - 80:80
+    networks:
+      - my_network
